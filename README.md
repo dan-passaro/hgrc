@@ -1,4 +1,5 @@
-# My personal `.hgrc`
+My personal `.hgrc`
+===================
 
 This is the `~/.hgrc` file I use at work, kept in version control just for my
 own sake.
