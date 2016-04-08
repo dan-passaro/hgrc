@@ -1,0 +1,30 @@
+# example user config (see "hg help config" for more info)
+[ui]
+# name and email, e.g.
+# username = Jane Doe <jdoe@example.com>
+username = Daniel Passaro <daniel.passaro@regionalhelpwanted.com>
+ignore = ~/.hgignore
+merge=internal:merge3
+
+[alias]
+slog = log -T '{label("log.changeset", shortest(node, 7))}  {desc|firstline}\n'
+status = status ''
+show = log -pr
+
+[pager]
+pager = LESS='FRX' less
+
+# allow 'hg help' to get pager
+attend = export,diff,log,glog,help,blame,manifest,files,locate,cat,slog,show
+
+[extensions]
+# uncomment these lines to enable some popular extensions
+# (see "hg help extensions" for more info)
+#
+pager =
+progress =
+color =
+shelve=
+rebase=
+purge=
+strip=
