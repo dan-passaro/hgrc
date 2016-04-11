@@ -7,7 +7,6 @@ ignore = ~/.hgignore
 merge=internal:merge3
 
 [alias]
-slog = log -T '{label("log.changeset", shortest(node, 7))}  {desc|firstline}\n'
 status = status ''
 show = log -pr
 
@@ -28,3 +27,6 @@ shelve=
 rebase=
 purge=
 strip=
+
+[templates]
+oneline={label("log.changeset", shortest(node, 7))} {desc|firstline}\n
