@@ -4,11 +4,13 @@
 # username = Jane Doe <jdoe@example.com>
 username = Daniel Passaro <daniel.passaro@regionalhelpwanted.com>
 ignore = ~/.hgignore
-merge=internal:merge3
+merge=:merge
 
 [alias]
 status = status ''
+st = st ''
 show = log -pr
+viewbranch = !$HG log -Mr "reverse(..${1-$($HG id --id -r .)} - ..@)" $@
 
 [pager]
 pager = LESS='FRX' less
@@ -27,6 +29,11 @@ shelve=
 rebase=
 purge=
 strip=
+evolve=~/Projects/hgrc/evolve/evolve.py
+remotenames=~/Projects/hgremotenames/remotenames.py
 
 [templates]
 oneline={label("log.changeset", shortest(node, 7))} {desc|firstline}\n
+
+[remotenames]
+forceto = True
