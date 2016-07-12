@@ -2,4 +2,4 @@ source "https://bitbucket.org"
 dest "ext"
 
 hg "marmoute/mutable-history@stable", {"hgext" => "evolve"}
-hg "seanfarley/hgremotenames@@", "remotenames.py"
+hg "seanfarley/hgremotenames", "remotenames.py"
