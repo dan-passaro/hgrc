@@ -71,7 +71,6 @@ import re
 import collections
 import socket
 import errno
-import hashlib
 import struct
 sha1re = re.compile(r'\b[0-9a-f]{6,40}\b')
 
@@ -3860,7 +3859,7 @@ def _obsrelsethashtree(repo, encodeonemarker):
     for i in unfi:
         ctx = unfi[i]
         entry = 0
-        sha = hashlib.sha1()
+        sha = util.sha1()
         # add data from p1
         for p in ctx.parents():
             p = p.rev()
